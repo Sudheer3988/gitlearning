@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div  class="image">
+            <img src="reg.jpg" alt="reg" width="100%" height="700px">
+        </div>
+        <div class="regform">
+            <h1 >STUDENT REGISTRATION FORM</h1>
+            <form action="">
+                <span ><input type="text" placeholder="First name"class="small" id="fname"></span>
+                <span > <input type="text" placeholder="Last name"class="small" id="lname"></span><br><br><br>
+                <input type="text" placeholder="Address"class="big" id="address"><br><br><br>
+                <span><label  class="gender"  for="grender">Gender:</label></span> 
+                <span><input type="radio" id="male" value="male"></span>
+                <span><label  class="gender" for="male">Male</label></span>
+                <span><input type="radio" id="female" value="female"></span>
+                <span><label  class="gender" for="female">Female</label></span>
+                <span><input type="radio" id="other" value="other"></span>
+                <span><label  class="gender" for="other">Other</label></span><br><br><br>
+                <span ><select class="dropdown"> <option value="state">State</option></select></span>
+                <span ><select class="dropdown"><option value="cite">City</option></select></span><br><br>
+                <input type="text" placeholder="Pincode"class="big" id="pincode"><br><br>
+                <input type="text" placeholder="Course"class="big" id="course"><br><br>
+                <input type="email" placeholder="Email ID"class="big" id="email"><br><br><br>
+                <input type="date" placeholder="dd/mm/yyyy" class="big" id="date"><br><br>
+                <input type="file" placeholder="Profile" class="big"><br><br>
+                <div class="button">
+                <div ><input type="reset" value="RESET ALL" class="reset" ></div>
+                <div><button type="button" class="submit" onclick="result()">Submit</button></div>
+                </div>
+
+
+            </form>
+        </div>
+    </div>
+    <script>
+        function result(){
+            alert("");
+            var firstnumber=document.getElementById("fname").value;
+            document.getElementById("fnameresult").innerHTML=
+            "First Name = "+ firstnumber;
+        
+       
+            var lastnumber=document.getElementById("lname").value;
+            document.getElementById("lnameresult").innerHTML=
+            "Last Name = "+ lastnumber;
+        
+            var address=document.getElementById("address").value;
+            document.getElementById("addressresult").innerHTML=
+            "Address = "+ address;
+
+            var pincode=document.getElementById("pincode").value;
+            document.getElementById("pincoderesult").innerHTML=
+            "Pincode = "+ pincode;
+
+            var course=document.getElementById("course").value;
+            document.getElementById("courseresult").innerHTML=
+            "Course = "+ course;
+
+            var date=document.getElementById("date").value;
+            document.getElementById("dateresult").innerHTML=
+            "Date = "+ date;
+        }
+    </script>
+    <div id="result">
+        <p><span id="fnameresult"></span></p>
+        <p><span id="lnameresult"></span></p>
+        <p><span id="addressresult"></span></p>
+        <p><span id="gender"></span></p>
+        <p><span id="pincoderesult"></span></p>
+        <p><span id="courseresult"></span></p>
+        <p><span id="emailresult"></span></p>
+        <p><span id="dateresult"></span></p>
+    </div>
+    <div>
+
+    </div>
+    
+</body>
+</html>
