@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<style>
+    .container1{
+        display:flex;
+        gap: 50px;
+        padding-top: 50px;
+        
+    }
+    .container{
+        align-content: center;
+        border: 1px solid;
+        text-align:right;
+        padding: 15px;
+        background-color:cornflowerblue;
+        border-radius: 10px;
+
+    }
+    .submit{
+        background-color:chartreuse;
+        width:180px;
+    }
+    h3{ 
+     text-align: center;
+     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+     font-size: 25px;
+
+    }
+    input{
+        margin-top: 10px;
+        padding: 7px;
+        border-radius: 5px;
+    }
+    h2{
+        font-family:Arial, Helvetica, sans-serif;
+    }
+</style>
+<script>
+    function addnumbers(){
+    var a=document.getElementById("firstnumber").value;
+    var b=document.getElementById("second number").value;
+    var result=Number(a)+Number(b);
+    document.getElementById("result").value=result;
+    }
+    function subnumbers(){
+    var a=document.getElementById("firstnumber1").value;
+    var b=document.getElementById("secondnumber1").value;
+    var result=Number(a)-Number(b);
+    document.getElementById("result1").value=result;
+    }
+    function mulnumbers(){
+    var a=document.getElementById("firstnumber2").value;
+    var b=document.getElementById("secondnumber2").value;
+    var result=Number(a)*Number(b);
+    document.getElementById("result2").value=result;
+    }
+    function divnumbers(){
+    var a=document.getElementById("firstnumber3").value;
+    var b=document.getElementById("secondnumber3").value;
+    var result=Number(a)/Number(b);
+    document.getElementById("result3").value=result;
+    }
+
+</script>
+<body>
+    <div class="container1">
+        <div class="container">
+            <h3>Addition</h3></br>
+            <label for="first number">First Number:</label>
+            <input type="text" id="firstnumber"><br>
+            <laber for="second number">Second Number:</laber>
+            <input type="text" id="second number"></br>
+            <input type="submit" class="submit" onclick="addnumbers()">
+            <h2>Result:<input type="text" id="result"></h2></br>
+        </div>
+        <div class="container">
+            <h3>Substraction</h3><br>
+            <label for="first number">First Number:</label>
+            <input type="text" id="firstnumber1"><br>
+            <laber for="second number">Second Number:</laber>
+            <input type="text" id="secondnumber1"></br>
+            <input type="submit" class="submit" onclick="subnumbers()">
+            <h2>Result:<input type="text" id="result1"></h2></br>
+        </div>
+        <div class="container">
+            <h3>Multiplication</h3><br>
+            <label for="first number">First Number:</label>
+            <input type="text" id="firstnumber2"><br>
+            <laber for="second number">Second Number:</laber>
+            <input type="text" id="secondnumber2"></br>
+            <input type="submit" class="submit" onclick="mulnumbers()">
+            <h2>Result:<input type="text" id="result2"></h2></br>
+        </div>
+        <div class="container">
+            <h3>Division</h3><br>
+            <label for="first number">First Number:</label>
+            <input type="text" id="firstnumber3"><br>
+            <laber for="second number">Second Number:</laber>
+            <input type="text" id="secondnumber3"></br>
+            <input type="submit" class="submit" onclick="divnumbers()">
+            <h2>Result:<input type="text" id="result3"></h2></br>
+        </div>
+    </div>
+    
+</body>
+</html>
